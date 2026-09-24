@@ -1,0 +1,35 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - ./:/var/www/html
+      - ./local/config.php:/var/www/html/includes/config.php:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: mariadb:10.11
+    environment:
+      MARIADB_DATABASE: mira_cafe
+      MARIADB_USER: mira
+      MARIADB_PASSWORD: mira_local_only
+      MARIADB_ROOT_PASSWORD: mira_root_local_only
+    volumes:
+      - mira_db:/var/lib/mysql
+      - ./database.sql:/docker-entrypoint-initdb.d/01-mira.sql:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+
+volumes:
+  mira_db:
+

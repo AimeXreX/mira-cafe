@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+uploads/*
+!uploads/index.html
+local/data/
+*.log
+*.sql.gz
+.DS_Store
+Thumbs.db

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 140" role="img" aria-labelledby="t d">
+ <title id="t">Mira Café</title><desc id="d">نشان اختصاصی میرا کافه</desc>
+ <g fill="none" stroke="#f4d6c8" stroke-width="2"><path d="M25 72c0-34 27-59 61-59s61 25 61 59-27 59-61 59-61-25-61-59Z"/><path d="M42 72c14-7 25-23 30-43 7 20 18 36 35 43-17 7-28 22-35 43-5-21-16-36-30-43Z"/><path d="M88 38c17 8 28 20 34 34-6 14-17 26-34 34"/></g>
+ <text x="168" y="72" fill="#fffdf8" font-family="Georgia,serif" font-size="54" font-style="italic" font-weight="700">Mira</text>
+ <text x="171" y="101" fill="#f4d6c8" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="8">CAFÉ</text>
+</svg>
